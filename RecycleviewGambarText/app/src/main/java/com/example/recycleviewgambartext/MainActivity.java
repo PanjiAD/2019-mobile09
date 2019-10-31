@@ -1,10 +1,12 @@
 package com.example.recycleviewgambartext;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         avangersAdapter avangersAdapter = new avangersAdapter(listAvangers);
 
         rvAvangers.setAdapter(avangersAdapter);
-        rvAvangers.setLayoutManager(new LinearLayoutManager(this));
+//        rvAvangers.setLayoutManager(new LinearLayoutManager(this));
+//        rvAvangers.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        rvAvangers.setLayoutManager(new GridLayoutManager(this, 2));
+
     }
 }
